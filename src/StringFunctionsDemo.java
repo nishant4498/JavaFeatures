@@ -8,7 +8,7 @@ public class StringFunctionsDemo {
 		System.out.println(words.length);
 	}
 	
-	public static void FirstRepeatedCharInWord(String word){
+	public static void FirstNonRepeatedCharInWord(String word){
 		Map<Character,Integer> charCountMap = new LinkedHashMap<Character,Integer>();
 		
 		for(int i =0;i< word.length();i++){
@@ -97,10 +97,10 @@ public class StringFunctionsDemo {
 		String sentence = "Hi I am Nishant";
 		countWords(sentence);
 		
-		FirstRepeatedCharInWord("nishant");
-		FirstRepeatedCharInWord("teeter");
-		FirstRepeatedCharInWord("stress");
-		FirstRepeatedCharInWord("sttrreess");
+		FirstNonRepeatedCharInWord("nishant");
+		FirstNonRepeatedCharInWord("teeter");
+		FirstNonRepeatedCharInWord("stress");
+		FirstNonRepeatedCharInWord("sttrreess");
 		
 		CountAlphabetOccurenceInString("hello!! i am nishant");
 
