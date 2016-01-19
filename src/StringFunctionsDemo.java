@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -70,14 +71,52 @@ public class StringFunctionsDemo {
 				}
 			}
 			
-		}
-		@SuppressWarnings("unused")
-		Character nonRepeatedChar = null;
+		}	
 		
 		System.out.println("Count of characters:");
 		for(Character key : charCountMap.keySet()){
 			System.out.print(key +  "= " + charCountMap.get(key) + "  ");
 		}		
+	}
+	
+	public static boolean isUniqueCharacterSet(String str){
+		//If the length of the string is more than 128 (or 256 in case of extended character set) then obviously the
+		// charset in not unique.
+		
+		if(str.length() > 128) return false;
+		
+		boolean[] char_set = new boolean[128];
+		
+		for(int i =0;i< str.length();i++){
+			int c = str.charAt(i);
+			if(char_set[c]){
+				return false;
+			}else{
+				char_set[c] = true;
+			}
+		}
+		return true;
+	}
+	
+	public static String sortString(String s){
+		char[] content = s.toCharArray();
+		Arrays.sort(content);
+		return new String(content);
+	}
+	
+	/*
+	 * Character related manipulations.
+	 */
+	
+	public static void charManipulations(){
+		//String name = "Nishant";
+		int character = 'a';
+		int char1 = 'A';
+		int diff = 'a' - 'A';
+		System.out.println(character);
+		System.out.println(char1);
+		System.out.println(diff);
+		System.out.println(Character.getNumericValue('a'));
 	}
 	
 	
@@ -103,6 +142,12 @@ public class StringFunctionsDemo {
 		FirstNonRepeatedCharInWord("sttrreess");
 		
 		CountAlphabetOccurenceInString("hello!! i am nishant");
+		
+		System.out.println("\nIs Unique: " + isUniqueCharacterSet("nishat"));
+		
+		System.out.println("String Sorting:  " + sortString("bcghwerust"));
+		
+		charManipulations();
 
 	}
 
