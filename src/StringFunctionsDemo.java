@@ -119,6 +119,31 @@ public class StringFunctionsDemo {
 		System.out.println(Character.getNumericValue('a'));
 	}
 	
+	public static void stringBuilderDemo(){
+		StringBuilder sb = new StringBuilder();
+		sb.append("Nish");
+		sb.append("ant");
+		System.out.println(sb.toString());
+	}
+	
+	
+	/*
+	 * This function returns true if all the characters in the given string are unique otherwise returns false.
+	 * Here we use bitwise left ship operator (<<) and bitwise and operator to derive at the conclusion.
+	 */
+	public static boolean isUniqueChar(String str){
+		int length = str.length();		
+		int checker = 0;		
+		for(int i=0;i< length ; i++){
+			int val = str.charAt(i) - 'a';
+			if((checker & (1 << val)) > 0){
+				return false;
+			}
+			checker |= 1 << val;
+		}
+		return true;
+	}
+	
 	
 	public static void main(String[] args) {
 		
@@ -148,6 +173,7 @@ public class StringFunctionsDemo {
 		System.out.println("String Sorting:  " + sortString("bcghwerust"));
 		
 		charManipulations();
+		stringBuilderDemo();
 
 	}
 
