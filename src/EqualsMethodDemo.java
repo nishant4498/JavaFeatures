@@ -9,7 +9,6 @@ public class EqualsMethodDemo {
 		
 		System.out.println(date1.equals(date2));
 	}
-
 }
 
 class Date{
@@ -17,6 +16,7 @@ class Date{
 	private int month;
 	private int day;
 	
+	public Date(int day, int month, int year){
 		this.day = day;
 		this.year = year;
 		this.month = month;
