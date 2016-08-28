@@ -87,12 +87,13 @@ class ArrayDemo {
 
 class ArrayListDemo{
 	List<Integer> myList = new ArrayList<Integer>();
+	//Arrays.asList(1,100,50,25); returns an unmodifiable list.
 	
 	public void addToList(){
-		myList.add(1);
-		myList.add(100);
-		myList.add(50);
-		myList.add(25);
+		myList.add(10);
+		myList.add(1000);
+		myList.add(500);
+		myList.add(250);
 	}
 	
 	public void displayList(){
@@ -102,7 +103,8 @@ class ArrayListDemo{
 			System.out.print(element + " ");
 		}
 		
-		myList.add(2, 60);// Add 60 at index 2
+		
+		//myList.add(2, 60);// Add 60 at index 2
 		
 		System.out.println("\nAnother Way to iterate");
 		
@@ -120,8 +122,7 @@ class ArrayListDemo{
 		
 		while(itr.hasNext()){
 			System.out.print(itr.next() + " ");
-		}
-		
+		}		
 	}
 	
 	public void sortList(){
@@ -166,7 +167,7 @@ class ArrayListDemo{
 }
 
 class HashMapDemo{
-	Map<Integer,Student> myMap = new HashMap<Integer,Student>();
+	Map<Integer,Student> myMap = new HashMap<>();
 	
 	public void addElement(){
 		Student s1 = new Student("Nishant",27);
@@ -204,7 +205,7 @@ class HashMapDemo{
 }
 
 class QueueDemo{
-	Queue<Student> myQueue= new LinkedList<Student>();
+	Queue<Student> myQueue= new LinkedList<>();
 	
 	public void addToQueue(){
 		Student s1 = new Student("Nishant",27);
@@ -233,7 +234,7 @@ class QueueDemo{
 }
 
 class LinkedListDemo{
-	LinkedList<Student> myLinkedList = new LinkedList<Student>();
+	LinkedList<Student> myLinkedList = new LinkedList<>();
 	
 	
 	public void add(){

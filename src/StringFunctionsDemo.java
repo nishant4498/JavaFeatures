@@ -6,7 +6,7 @@ public class StringFunctionsDemo {
 
 	public static void countWords(String sentence){
 		String[] words = sentence.trim().split(" ");
-		System.out.println(words.length);
+		System.out.println("The number of words are: " + words.length);
 	}
 	
 	public static void FirstNonRepeatedCharInWord(String word){
@@ -75,7 +75,7 @@ public class StringFunctionsDemo {
 		
 		System.out.println("Count of characters:");
 		for(Character key : charCountMap.keySet()){
-			System.out.print(key +  "= " + charCountMap.get(key) + "  ");
+			System.out.print(key +  " = " + charCountMap.get(key) + "  ");
 		}		
 	}
 	
@@ -128,8 +128,9 @@ public class StringFunctionsDemo {
 	
 	
 	/*
-	 * This function returns true if all the characters in the given string are unique otherwise returns false.
-	 * Here we use bitwise left ship operator (<<) and bitwise and operator to derive at the conclusion.
+	 * This function returns true if all the characters in the given string are
+	 * unique otherwise returns false. Here we use bitwise left ship operator
+	 * (<<) and bitwise and operator to derive at the conclusion.
 	 */
 	public static boolean isUniqueChar(String str){
 		int length = str.length();		
@@ -168,7 +169,8 @@ public class StringFunctionsDemo {
 		
 		CountAlphabetOccurenceInString("hello!! i am nishant");
 		
-		System.out.println("\nIs Unique: " + isUniqueCharacterSet("nishat"));
+		//System.out.println("\nIs Unique: " + isUniqueCharacterSet("nishat"));
+		System.out.println("\nIs Unique: " + isUniqueChar("nishant"));
 		
 		System.out.println("String Sorting:  " + sortString("bcghwerust"));
 		

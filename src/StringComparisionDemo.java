@@ -27,6 +27,8 @@ public class StringComparisionDemo {
 		}
 		if ( s1 == s4 ){
 		    System.out.println("s1 and s4 are same" );  // 3.
+		}else{
+			System.out.println("s1 and s4 are different");
 		}
 		if ( s1 == s5 ){
 		    System.out.println("s1 and s5 are same" );  // 4.

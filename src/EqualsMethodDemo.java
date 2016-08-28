@@ -3,7 +3,11 @@ public class EqualsMethodDemo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		
+		Date date1 = new Date(10, 10, 2016);
+		Date date2 = new Date(10, 10, 2016);
+		
+		System.out.println(date1.equals(date2));
 	}
 
 }
@@ -13,7 +17,6 @@ class Date{
 	private int month;
 	private int day;
 	
-	public Date(int day, int year, int month){
 		this.day = day;
 		this.year = year;
 		this.month = month;
